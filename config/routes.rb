@@ -1,4 +1,6 @@
 Youquiz::Application.routes.draw do
+  get "staticpages/home"
+
   devise_for :users
 
   root :to => 'staticpages#home'
