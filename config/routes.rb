@@ -1,7 +1,11 @@
 Youquiz::Application.routes.draw do
+  get "quizzes/create"
+  
   get "staticpages/home"
 
   devise_for :users
+  
+  resources :quizzes, :only => [:new, :create]
 
   root :to => 'staticpages#home'
   # The priority is based upon order of creation:

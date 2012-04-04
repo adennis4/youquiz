@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120403221417) do
+ActiveRecord::Schema.define(:version => 20120403234950) do
+
+  create_table "quizzes", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "grade_level"
+    t.text     "questions"
+    t.text     "correct_responses"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

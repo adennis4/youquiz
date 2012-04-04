@@ -1,0 +1,25 @@
+<h1>Let's Create a Quiz</h1>
+
+<form class="well">
+<%= form_for @quiz, :url => { :action => "create" } do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :description %>
+	<%= f.text_area :description %>
+	
+	<%= f.label :grade_level %>
+	<%= f.text_field :grade_level %>
+	
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :questions %>
+	<%= f.text_area :questions %>
+	
+	<%= f.label :correct_responses %>
+	<%= f.text_area :correct_responses %>
+	
+	<%= f.submit "Create this Quiz" %>
+<% end %>
+</class>
