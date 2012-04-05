@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120405024323) do
+ActiveRecord::Schema.define(:version => 20120405031355) do
 
   create_table "assessments", :force => true do |t|
     t.string   "grade_received"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20120405024323) do
     t.text     "correct_responses"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "video_url"
+    t.string   "class"
   end
 
   create_table "quizzes_teachers", :id => false, :force => true do |t|
@@ -43,9 +45,13 @@ ActiveRecord::Schema.define(:version => 20120405024323) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "students_teachers", :id => false, :force => true do |t|
-    t.integer "student_id"
-    t.integer "teacher_id"
+  create_table "subjects", :force => true do |t|
+    t.datetime "start_time"
+    t.string   "subject"
+    t.integer  "student_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "teachers", :force => true do |t|
@@ -53,11 +59,6 @@ ActiveRecord::Schema.define(:version => 20120405024323) do
     t.string   "school"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "teachers_quizzes", :id => false, :force => true do |t|
-    t.integer "teacher_id"
-    t.integer "quiz_id"
   end
 
   create_table "users", :force => true do |t|

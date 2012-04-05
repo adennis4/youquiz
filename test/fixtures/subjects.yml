@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_time: 2012-04-04 20:13:55
+  subject: MyString
+  student_id: 1
+  teacher_id: 1
+
+two:
+  start_time: 2012-04-04 20:13:55
+  subject: MyString
+  student_id: 1
+  teacher_id: 1
