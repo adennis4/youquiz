@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  grade_received: MyString
+  student_responses: MyString
+  quiz_id: 
+  student_id: 
+
+two:
+  grade_received: MyString
+  student_responses: MyString
+  quiz_id: 
+  student_id: 
