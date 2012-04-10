@@ -1,13 +1,25 @@
 Youquiz::Application.routes.draw do
+  get "subjects/new"
+
+  get "subjects/create"
+
+  get "subjects/index"
+
+  get "subjects/show"
+
+  get "subjects/edit"
+
+  get "subjects/update"
+
   get "quizzes/create"
   
   get "staticpages/home"
 
   devise_for :users
   
-  resources :quizzes, :only => [:new, :create]
+  resources :quizzes, :only => [:new, :create, :index, :show]
 
-  root :to => 'staticpages#home'
+  root :to => 'subjects#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Subject.create("start_time" => "9", "subject" => "Spanish", "teacher_id" => 1, "student_id" => 1)
+Subject.create("start_time" => "10", "subject" => "French", "teacher_id" => 2, "student_id" => 2)
+
+q1 = Quiz.create("title" => "Quiz-1", "description" => "The first quiz", "grade_level" => 9, "questions" => "A list of questions", "correct_responses" => "A list of their corresponding answers", "video_url" => "http://example.com")
+q2 = Quiz.create("title" => "Quiz-2", "description" => "The second quiz", "grade_level" => 10, "questions" => "2A list of questions", "correct_responses" => "2A list of their corresponding answers", "video_url" => "http://example2.com")
+
+t1 = Teacher.create("name" => "Roberta", "school" => "Montini")
+t2 = Teacher.create("name" => "Arthur", "school" => "Montini")
+
+Assessment.create("grade_received" => "A", "student_responses" => "These are the responses", "quiz_id" => 1, "student_id" => 1)
+Assessment.create("grade_received" => "B", "student_responses" => "2These are the responses", "quiz_id" => 2, "student_id" => 2)
+
+Student.create("name" => "Johnny")
+Student.create("name" => "Sarah")
+
+t1.quizzes << q1
+t2.quizzes << q2
+

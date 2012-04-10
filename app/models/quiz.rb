@@ -1,5 +1,5 @@
 class Quiz < ActiveRecord::Base
-  attr_accessible :correct_responses, :description, :grade_level, :questions, :title
+  attr_accessible :correct_responses, :description, :grade_level, :questions, :title, :correct_response, :video_url
   
   validates :title,             :presence => true
   validates :description,       :presence => true

@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(:version => 20120405031355) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.string   "video_url"
-    t.string   "class"
   end
 
   create_table "quizzes_teachers", :id => false, :force => true do |t|
