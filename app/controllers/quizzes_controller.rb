@@ -18,6 +18,6 @@ class QuizzesController < ApplicationController
   end
   
   def show
-    @quiz
+    @quiz = Quiz.find_by_title(params[:id])
   end
 end

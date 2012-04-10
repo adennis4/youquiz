@@ -1,22 +1,10 @@
 Youquiz::Application.routes.draw do
-  get "subjects/new"
 
-  get "subjects/create"
-
-  get "subjects/index"
-
-  get "subjects/show"
-
-  get "subjects/edit"
-
-  get "subjects/update"
-
-  get "quizzes/create"
   
-  get "staticpages/home"
+  match "about" => "staticpages#about"
 
   devise_for :users
-  
+  resources :subjects
   resources :quizzes, :only => [:new, :create, :index, :show]
 
   root :to => 'subjects#index'

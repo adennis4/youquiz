@@ -1,3 +1,5 @@
-<% @quizzes.each do |quiz| %>
-	<%= link_to quiz, quizzes_path %>
-<% end %>
+<div class="container">
+	<% @quizzes.each do |quiz| %>
+		<p><%= link_to quiz, quiz_path(quiz) %></p>
+	<% end %>
+</div>
