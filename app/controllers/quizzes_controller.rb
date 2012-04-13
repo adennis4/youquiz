@@ -5,7 +5,7 @@ class QuizzesController < ApplicationController
   end
   
   def index
-    @quizzes = Quiz.all.map { |q| q.title}
+    @quizzes = Quiz.all.map { |q| q.title }
   end
   
   def create
