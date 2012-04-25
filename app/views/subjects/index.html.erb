@@ -1,5 +1,5 @@
 <div class="container">
 	<% @subjects.each do |subject| %>
-		<p><%= link_to subject, quizzes_path %></p>
+		<p><%= link_to subject, subject_path(subject) %></p>
 	<% end %>
 </div>

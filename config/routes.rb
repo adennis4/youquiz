@@ -2,12 +2,13 @@ Youquiz::Application.routes.draw do
 
   
   match "about" => "staticpages#about"
+  match "home"  => "staticpages#home"
 
   devise_for :users
   resources :subjects
   resources :quizzes, :only => [:new, :create, :index, :show]
 
-  root :to => 'subjects#index'
+  root :to => 'staticpages#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

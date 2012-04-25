@@ -1,25 +1,63 @@
-<h1>Let's Create a Quiz</h1>
+<%= form_for @quiz, :html => { :class => "well form-horizontal" } do |f| %>
+	<fieldset>
+		<legend>Let's Create a Quiz!</legend>
 
-<%= form_for @quiz, :html => { :class => "well" } do |f| %>
-	<div class="form-inline">
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</div>
-	<div class="form-inline">
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</div>
-	<div class="form-inline">
-		<%= f.label :grade_level %>
-		<%= f.text_field :grade_level %>
-  </div>
-	<div class="form-inline">
-		<%= f.label :questions %>
-		<%= f.text_area :questions %>
-	</div>
-	<div class="form-inline">
-		<%= f.label :correct_responses %>
-		<%= f.text_area :correct_responses %>
-	</div>
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :title %>
+			</label>
+			<div class="controls">
+				<%= f.text_field :title %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :description %>
+			</label>
+			<div class="controls">
+				<%= f.text_field :description %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :grade_level %>
+			</label>
+			<div class="controls">
+				<%= f.text_field :grade_level %>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :video_url %>
+			</label>
+			<div class="controls">
+				<%= f.text_field :video_url %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :questions %>
+			</label>
+			<div class="controls">
+				<%= f.text_area :questions %>
+			</div>
+		</div>
+		
+		<div class="control-group">
+			<label class="control-label" for="input01">
+				<%= f.label :correct_responses %>
+			</label>
+			<div class="controls">
+				<%= f.text_area :correct_responses %>
+			</div>
+		</div>
+		
+		<div class="create_button">
 		<%= f.submit "Create this Quiz", :class => "btn btn-primary" %>
+		</div>
+	</fieldset>
 <% end %>

@@ -10,6 +10,7 @@ class SubjectsController < ApplicationController
   end
 
   def show
+    @quizzes = Quiz.find_by_title(params[:id])
   end
 
   def edit
